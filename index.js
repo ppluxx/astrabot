@@ -10,21 +10,14 @@ const astrabot = new AoiClient({
         type: "aoi.db",
         db: require("@aoijs/aoi.db"),
         dbType: "KeyValue",
-        tables: ["economy", "astrabot", "moderation"],
+        tables: ["astrabot"],
         securityKey: process.env.DBKEY,
     }
 });
 const loader = new LoadCommands(astrabot);
 // Carrega os comandos
 const commandPaths = [
-    "./commands/economy",
-    "./commands/fun",
     "./commands/astrabot",
-    "./commands/utility",
-    "./commands/server",
-    "./commands/moderation",
-    "./commands/devs",
-    "./commands/socials",
 ];
 
 // Loop para carregar os comandos
