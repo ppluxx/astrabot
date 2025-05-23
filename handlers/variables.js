@@ -1,7 +1,12 @@
 require('dotenv').config();
 module.exports = (astrabot)=>{
     astrabot.variables({
-        prefix: "a.",
         version: process.env.VERSION,
-    }, "astrabot");
+        prefix: "a.",
+
+        isBlacklisted: false,
+        blacklistReason: "Não especificado.",
+        blacklistDate: "Erro ao obter.",
+        blacklistAuthor: "Erro ao obter."
+    });
 };
